@@ -38,7 +38,7 @@ class Posts extends Component {
           </Button>
           <Link
             to={{
-              pathname: `/blog/${this.props.id}`,
+              pathname: `/home/${this.props.id}`,
               state: {
                 key1: "data", 
                 title: this.props.title,
@@ -46,9 +46,9 @@ class Posts extends Component {
               },
             }}
           >
-            <Button icon color="orange">
+            {/* <Button icon color="orange">
               <Icon name="eye" />
-            </Button>
+            </Button> */}
           </Link>
         </div>
       </Segment>

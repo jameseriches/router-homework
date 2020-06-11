@@ -8,8 +8,8 @@ const NavBar = () => {
     return (
         <Menu>
             <Link to='/'><Menu.Item>Reddit Home</Menu.Item></Link>
-            <Link to='/'><Menu.Item>Contact Us</Menu.Item></Link>
-            <Link to='/'><Menu.Item>Posts</Menu.Item></Link>
+            <Link to='/ContactUs'><Menu.Item>Contact Us</Menu.Item></Link>
+            <Link to='/Posts'><Menu.Item>Posts</Menu.Item></Link>
         </Menu>
     )
     

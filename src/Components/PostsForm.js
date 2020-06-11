@@ -35,7 +35,7 @@ render() {
         <Form.Group widths="equal">
         <Form.Input 
           placeholder={"Enter Title"}
-          label={"title"}
+          label={"Title"}
           name={"title"}
           onChannge ={this.handleChange}
           value={this.state.title}
@@ -43,16 +43,15 @@ render() {
          <Form.Input 
           placeholder={"Enter Body"}
           label={"Body"}
-          name={"Body"}
+          name={"body"}
           onChannge ={this.handleChange}
           value={this.state.title}
           />
 
-          <Form.Button color ="blue"></Form.Button>
+          <Form.Button color ="blue">Submit</Form.Button>
           </Form.Group>
           </Form>
     );
-}
-
+  }
 }
 

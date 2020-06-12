@@ -1,18 +1,20 @@
-import React from "react";
-import { Menu } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
-
-const NavBar = () => {
-
+export default class NavBar extends Component {
+  render() {
     return (
-        <Menu>
-            <Link to='/'><Menu.Item>Reddit Home</Menu.Item></Link>
-            <Link to='/ContactUs'><Menu.Item>Contact Us</Menu.Item></Link>
-            <Link to='/Posts'><Menu.Item>Posts</Menu.Item></Link>
-        </Menu>
-    )
-    
-    }
-    
-    export default NavBar;
+      <div>
+        <NavLink exact activeStyle={{ color: "blue" }} to="/">
+          Home
+        </NavLink>
+        <NavLink activeStyle={{ color: "blue" }} to="/ContactUs">
+          Contact Us Page
+        </NavLink>
+        <NavLink activeStyle={{ color: "blue" }} to="/Posts">
+          Posts
+        </NavLink>
+      </div>
+    );
+  }
+}

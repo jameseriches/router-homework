@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useFormInput } from "../FormInput/useFormInput";
 
-export default function newPostForm(props){
+export default function NewPostForm({ add }) {
 
 const title = useFormInput("", "title");
-// const body = useFormInput("", body);
+const body = useFormInput("", body);
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log({ title: title.value, body: body.value });
-    // add({ title: title.value, body: body.value });
+    console.log({ title: title.value, body: body.value });
+    add({ title: title.value, body: body.value });
   };
 
   const handleChange = (e) => {

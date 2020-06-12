@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Segment, Header, Button, Icon } from "semantic-ui-react";
 import PostsForm from "./PostsForm";
 
-class Posts extends Component {
-  state = { editing: false };
+const Posts = (props) => {
+  const [editing, setEditing] = useState(false)
 
-  toggleEdit = () => this.setState({ editing: !this.state.editing });
+  const toggleEdit = () => setEditing(!editing)
+  // toggleEdit = () => this.setState({ editing: !this.state.editing });
 
-  render() {
     return (
       <Segment
         style={{
@@ -17,20 +17,20 @@ class Posts extends Component {
           justifyContent: "space-between",
         }}
       >
-        {this.state.editing ? (
+        {editing ? (
           <PostsForm
-            {...this.props}
-            edit={this.props.edit}
-            toggle={this.toggleEdit}
+            {...props}
+            edit={props.edit}
+            toggle={toggleEdit}
           />
         ) : (
           <>
-            <Header as="h3">{this.props.title}</Header>
-            <p>{this.props.body}</p>
+            <Header as="h3">{props.title}</Header>
+            <p>{props.body}</p>
           </>
         )}
         <div>
-          <Button icon color="Green" onClick={this.toggleEdit}>
+          <Button icon color="Green" onClick={toggleEdit}>
             <Icon name="pencil" />
           </Button>
           <Button icon color="yellow">
@@ -38,22 +38,20 @@ class Posts extends Component {
           </Button>
           <Link
             to={{
-              pathname: `/home/${this.props.id}`,
+              pathname: `/home/${props.id}`,
               state: {
                 key1: "data", 
-                title: this.props.title,
-                body: this.props.body,
+                title: props.title,
+                body: props.body,
               },
             }}
           >
-            {/* <Button icon color="orange">
-              <Icon name="eye" />
-            </Button> */}
           </Link>
         </div>
       </Segment>
     );
-  }
 }
 
 export default Posts;
+
+// {props.posts.map((post) => <Posts key={post.id} {...post} />)}

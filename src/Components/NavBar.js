@@ -9,7 +9,7 @@ export default class NavBar extends Component {
           Home
         </NavLink>
         <NavLink activeStyle={{ color: "blue" }} to="/ContactUs">
-          Contact Us Page
+          Contact Us
         </NavLink>
         <NavLink activeStyle={{ color: "blue" }} to="/Posts">
           Posts
@@ -18,3 +18,30 @@ export default class NavBar extends Component {
     );
   }
 }
+
+// export default class NavBar extends Component {
+//   const [hover, setHover] = useState(false);
+//   render() {
+//     return (
+//       <div 
+//         onMouseEnter={() => setHover(true)}
+//         onMouseLeave={() => setHover(false)}
+//         style={
+//           hover
+//             ? { ...styles.navBar, ...styles.hover } : styles.navBar
+//         }
+//       >
+//         <NavLink exact to="/">
+//           Home
+//         </NavLink>
+//         <NavLink to="/ContactUs">
+//           Contact Us
+//         </NavLink>
+//         <NavLink to="/Posts">
+//           Posts
+//         </NavLink>
+//       </div>
+//     );
+//   }
+// }
+

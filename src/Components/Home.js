@@ -1,7 +1,8 @@
 import React from "react"
-import {Header} from "semantic-ui-react"
+import newPostForm from './newPostForm'
+// import {Header} from "semantic-ui-react"
 
-import PostsForm from "./PostsForm"
+// import PostsForm from "./PostsForm"
 
 const Home = (props) => {
 
@@ -16,10 +17,10 @@ const Home = (props) => {
   }
 
   return (
-    <>
-      <Header as="h1">Create a Post!</Header>
-      <PostsForm add={addPost} />
-    </>
+    <header>
+      <h1>Create a Post!</h1>
+      <newPostForm add={addPost} />
+    </header>
   )
 }
 

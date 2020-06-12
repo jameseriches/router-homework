@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
-import { Container } from "semantic-ui-react";
+
 import ContactUs from "./components/ContactUs";
 import NavBar from "./components/NavBar";
 import Posts from "./components/Posts";
@@ -22,14 +22,14 @@ function App() {
   return (
     <>
       <NavBar />
-      <Container>
+     
         <Switch>
           <Route exact path="/" render={(props) => <Home setPosts={setPosts} posts={posts} {...props} />} />
           <Route exact path="/ContactUs" render={(props) => <ContactUs {...props} />} />
           <Route exact path="/Posts" render={(props) => <Posts {...props} setPosts={setPosts} posts={posts} />} />
           <Route render={(props) => <NoMatch {...props} />} />
         </Switch>
-      </Container>
+  
     </>
   );
 }

@@ -6,7 +6,7 @@ const ContactUs = () => {
             <h1>Contact Us!</h1>
              <div>
                  <h2> Address</h2>
-                 <p>We currently don't have an address, because we are not a real company</p>
+                 <p>We currently don't have an address, because we are not a real company.</p>
              </div>
              <div>
                  <h3>Phone</h3>
@@ -17,7 +17,7 @@ const ContactUs = () => {
                  </div>
                  <div>
                      <h4>Email</h4>
-                     <p>FakeReddit@gmailcom</p>
+                     <p>NotOurFault@g(oaway)mail.com</p>
                  </div>
 
         </div>

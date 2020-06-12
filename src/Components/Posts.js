@@ -29,7 +29,7 @@ const Posts = (props) => {
             <p>{props.body}</p>
           </>
         )}
-        <div>
+        {/* <div>
           <Button icon color="Green" onClick={toggleEdit}>
             <Icon name="pencil" />
           </Button>
@@ -46,8 +46,8 @@ const Posts = (props) => {
               },
             }}
           >
-          </Link>
-        </div>
+          </Link> */}
+        {/* </div> */}
       </Segment>
     );
 }
